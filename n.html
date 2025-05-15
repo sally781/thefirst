@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .side-menu{
+            display: none;
+            flex-direction: column;
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: absolute;
+            top: 50px;
+            /* right: 10px; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 100;
+        }
+
+        .side-menu a{
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .side-menu a:last-child{
+            border-bottom: none;
+        }
+
+        .show{
+            display: flex;
+
+        }
+
+        .menu-btu{
+            font-size: 18px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- <i class="fa-solid fa-circle-user" style="font-size: 50px;"></i> -->
+    <header class="header">
+        <!-- <i class="fas fa-circle-user fa-2x"></i> -->
+        <button class="menu-btu" onclick="toggleMenu()"><i class="fas fa-bars"></i> القاىمة</button>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <img src="Screenshot_20250502-124516_Chrome.jpg" alt="">
+
+    <nav id="sideMenu" class="side-menu">
+        <a href="m.html">نبذه عن الجامعة</a>
+        <a href="">التخصصات الموجودة </a>
+        <a href="">مكتبة الجامعة </a>
+    </nav>
+
+
+    <script>
+        function toggleMenu(){
+            document.getElementById("sideMenu").classList.toggle("show");
+
+        }
+    </script>
+</body>
+</html>
